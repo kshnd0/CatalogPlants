@@ -1,0 +1,12 @@
+name: CI-zachita 
+
+on:
+workflow dispatch: 
+
+jobs: 
+  say-hello: 
+    steps:
+    -uses: actions/checkout@v4
+
+    -name: Hello Author Name 
+    run: echo "Привет! Этот workflow запустил пользователь: ${{ github.actor }}"
